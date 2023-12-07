@@ -49,6 +49,7 @@ import com.kakyiretechnologies.composesample.ui.theme.DarkGreen
 import com.kakyiretechnologies.composesample.ui.theme.Green
 import com.kakyiretechnologies.composesample.ui.theme.LightGreen
 import com.kakyiretechnologies.composesample.ui.theme.Orange
+import com.kakyiretechnologies.composesample.ui.theme.TextBlack
 
 
 /**
@@ -104,13 +105,17 @@ fun SignInScreen(modifier: Modifier = Modifier) {
                 Text(
                     text = "Welcome back",
                     modifier.align(Alignment.CenterHorizontally),
-                    style = TextStyle(fontSize = 26.sp)
+                    style = TextStyle(fontSize = 26.sp, color = TextBlack)
                 )
                 Text(
                     text = "UserName", modifier.align(Alignment.CenterHorizontally),
-                    style = TextStyle(fontSize = 32.sp, fontWeight = FontWeight(700))
+                    style = TextStyle(
+                        fontSize = 32.sp,
+                        fontWeight = FontWeight(700),
+                        color = TextBlack
+                    )
                 )
-                Text(text = "ENTER PIN")
+                Text(text = "ENTER PIN", color = TextBlack)
                 PinTextField(
                     onChange = { pinValue = it })
                 TextButton(onClick = {
@@ -123,9 +128,12 @@ fun SignInScreen(modifier: Modifier = Modifier) {
                 }
 
                 Button(modifier = modifier.fillMaxWidth(),
-                    colors = ButtonDefaults.buttonColors(containerColor = Green),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Green,
+                        contentColor = Color.White
+                    ),
                     onClick = { /*TODO*/ }) {
-                    Text(text = "Sign In")
+                    Text(text = "Sign In", style = TextStyle(fontWeight = FontWeight(500)))
                 }
 
             }

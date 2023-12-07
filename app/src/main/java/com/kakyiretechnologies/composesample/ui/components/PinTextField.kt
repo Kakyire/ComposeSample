@@ -105,7 +105,7 @@ fun PinTextField(
                         )
 
                     )
-                    Spacer(modifier = modifier.width(10.dp))
+//                    Spacer(modifier = modifier.width(10.dp))
                 }
 
             }
@@ -120,5 +120,5 @@ fun PinTextField(
 @Preview(showBackground = true)
 @Composable
 fun PinTextFieldPreview() {
-    PinTextField {}
+    PinTextField (){}
 }
