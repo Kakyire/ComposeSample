@@ -31,6 +31,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.kakyiretechnologies.composesample.ui.theme.TextBlack
 
 
 /**
@@ -44,7 +45,7 @@ import androidx.compose.ui.unit.sp
 fun PinTextField(
     modifier: Modifier = Modifier,
     inputSize: Int = 4,
-    fontSize: TextUnit = 16.sp,
+    fontSize: TextUnit = 28.sp,
     onChange: (String) -> Unit
 ) {
 
@@ -91,7 +92,8 @@ fun PinTextField(
                     val borderColor = if (isFocus) Color.DarkGray else Color.LightGray
                     Text(
                         text = char,
-                        Modifier
+                        color = TextBlack,
+                        modifier = Modifier
                             .size(50.dp)
                             .border(
                                 borderSize,
@@ -120,5 +122,5 @@ fun PinTextField(
 @Preview(showBackground = true)
 @Composable
 fun PinTextFieldPreview() {
-    PinTextField (){}
+    PinTextField() {}
 }

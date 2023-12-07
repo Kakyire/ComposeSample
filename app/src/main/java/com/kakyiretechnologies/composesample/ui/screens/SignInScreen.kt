@@ -1,5 +1,6 @@
 package com.kakyiretechnologies.composesample.ui.screens
 
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -132,7 +133,7 @@ fun SignInScreen(modifier: Modifier = Modifier) {
                         containerColor = Green,
                         contentColor = Color.White
                     ),
-                    onClick = { /*TODO*/ }) {
+                    onClick = { Log.d( null,"Pin value $pinValue") }) {
                     Text(text = "Sign In", style = TextStyle(fontWeight = FontWeight(500)))
                 }
 
