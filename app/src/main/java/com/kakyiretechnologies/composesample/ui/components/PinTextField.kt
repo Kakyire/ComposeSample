@@ -60,6 +60,7 @@ fun PinTextField(
 
     BasicTextField(
         modifier = Modifier
+            .fillMaxWidth()
             .padding(4.dp),
         value = pinValue,
         onValueChange = {
